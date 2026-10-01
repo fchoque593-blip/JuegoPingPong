@@ -1,0 +1,20 @@
+# Unity generated folders
+Proyecto PONGG/Library/
+Proyecto PONGG/Temp/
+Proyecto PONGG/Obj/
+Proyecto PONGG/Build/
+Proyecto PONGG/Builds/
+Proyecto PONGG/Logs/
+Proyecto PONGG/UserSettings/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# OS generated files
+.DS_Store
+Thumbs.db
