@@ -7,6 +7,9 @@ public class Ball : MonoBehaviour
 
     private Vector2 startPos;
 
+    public AudioSource audioSource;
+    public AudioClip sonidoChoque;
+
     void Start()
     {
         startPos = transform.position;
@@ -26,5 +29,10 @@ public class Ball : MonoBehaviour
         float y = Random.Range(0, 2) == 0 ? -1f : 1f;
 
         rb.linearVelocity = new Vector2(x, y).normalized * speed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        audioSource.PlayOneShot(sonidoChoque);
     }
 }

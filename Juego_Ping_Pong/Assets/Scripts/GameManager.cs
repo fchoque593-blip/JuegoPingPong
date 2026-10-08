@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     private int player1Score = 0;
     private int player2Score = 0;
 
+    public AudioSource audioSource;
+    public AudioClip sonidoPunto;
+
     private void Start()
     {
         UpdateScore();
@@ -24,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public void Player1Scored()
     {
+        audioSource.PlayOneShot(sonidoPunto);
+
         player1Score++;
         UpdateScore();
         ResetPosition();
@@ -31,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void Player2Scored()
     {
+        audioSource.PlayOneShot(sonidoPunto);
+
         player2Score++;
         UpdateScore();
         ResetPosition();
