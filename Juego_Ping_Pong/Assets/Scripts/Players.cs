@@ -12,16 +12,32 @@ public class Players : MonoBehaviour
     private void Awake()
     {
         if (rb == null)
-        {
             rb = GetComponent<Rigidbody2D>();
-        }
 
         startPos = transform.position;
     }
 
     private void Update()
     {
-        move = Input.GetAxisRaw(player1 ? "Vertical" : "Vertical2");
+        if (player1)
+        {
+            if (Input.GetKey(KeyCode.W))
+                move = 1f;
+            else if (Input.GetKey(KeyCode.S))
+                move = -1f;
+            else
+                move = 0f;
+        }
+
+        else
+        {
+            if (Input.GetKey(KeyCode.UpArrow))
+                move = 1f;
+            else if (Input.GetKey(KeyCode.DownArrow))
+                move = -1f;
+            else
+                move = 0f;
+        }
     }
 
     private void FixedUpdate()

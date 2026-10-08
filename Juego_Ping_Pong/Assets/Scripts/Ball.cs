@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 7f;
+    public float speed = 200f;
     public Rigidbody2D rb;
 
     private Vector2 startPos;
