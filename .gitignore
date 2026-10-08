@@ -18,3 +18,9 @@ Proyecto PONGG/UserSettings/
 # OS generated files
 .DS_Store
 Thumbs.db
+.vscode/
+Library/
+Logs/
+Temp/
+UserSettings/
+*.slnx
